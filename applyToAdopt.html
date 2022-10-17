@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/check.css">
+    <title>SignUp Page</title>
+
+
+    <script>
+        function printError(elementId, hintMsg) {
+            document.getElementById(elementId).innerHTML = hintMsg;
+
+        }
+        function validateForm() {
+            var returnValue = false;
+
+            //performing validations
+            var name = document.applicationForm.name.value;
+            var email = document.applicationForm.email.value;
+            var mobile = document.applicationForm.mobile.value;
+            // var password = document.applicationForm..value;
+            var address1 = document.applicationForm.add1.value;
+            var address2 = document.applicationForm.add2.value;
+            var petn = document.applicationForm.petname.value;
+            var petid2 = document.applicationForm.petid.value;
+            var rsn = document.applicationForm.reason.value;
+
+
+            //validate name
+            // if (password == "") {
+            //     printError("passErr", "----*please enter your password");
+            //     returnValue = false;
+            // }
+            if (address1 == "") {
+                printError("add1Err", "----*please enter your address1");
+                returnValue = false;
+
+            }
+            if (address2 == "") {
+                printError("add2Err", "----*plese enter your address2");
+                returnValue = false;
+            }
+
+            if (name == "") {
+                printError("nameErr", "----*please enter your name");
+                returnValue = false;
+            }
+            else {
+                var re = /[0-9]/.test(name);
+                if (re == true) {
+                    printError("nameErr", "----*dont include numbers");
+                    re = false;
+                }
+
+            }
+
+            //validate email
+            if (email == "") {
+                printError("emailErr", "----*please enter your email address");
+            }
+            // else {
+            //regular expression for email validation 
+            // var regex= /^\S+@\S+S\.\S+$/;
+            // if(regex.test(email)===false){
+            //     printError("emailErr","----*please enter valid email address");
+            //     returnValue= false;
+            // }
+            // }
+
+            //validate mobile number
+            if (mobile == "") {
+                printError("mobileErr", "----*please enter your mobile number");
+                returnValue = false;
+
+            }
+            else {
+                // var regex = /^[7-9][0-9]{9}$/;
+
+                if (isNaN(mobile) || (mobile.length) > 10 || (mobile.length) < 10) {
+                    printError("mobileErr", "enter valid no ");
+                    returnValue = false;
+
+                }
+            }
+
+
+            //validate petname
+            if (petn == "") {
+                printError("petnameErr", "----*Please enter pet name");
+                returnValue = false;
+            }
+
+            //validate petid
+            if (petid2 == "") {
+                printError("petidErr", "----*please enter pet Id");
+                returnValue = false;
+            }
+
+            //validate reason
+            if (rsn == "") {
+                printError("reasonErr", "----*please enter the reason you wanna adopt this pet");
+                returnValue = false;
+            }
+
+
+
+
+
+
+
+            return returnValue;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- <a class="back" href="index.html" target="_blank"><i class="fa fa-caret-left"></i>Back to Zumanji</a> -->
+
+        <img src="/images/zumanjiLogo2.jpg" class="centre">
+
+    </header>
+    <div class="container ">
+        <img src="/images/petimage5.jpg" alt="Nature" class="responsive-image-signup">
+
+        <div class="container text-center">
+            <div class="row bg-danger centre">
+                <div class="col-12 ">
+                    <h1>Apply to adopt a new pet for you</h1>
+                </div>
+                <!-- <div class="col">col</div>
+          <div class="col">col</div>
+          <div class="col">col</div> -->
+            </div>
+            <!-- <div class="row centre">
+                <div class="col-12 sample-1">You'll receive:</div>
+            </div> -->
+            <!-- <div class="row ">
+                <div class="col-lg-4 col-md-12 col-sm-12 content1">Happy "Tails" and pet advocacy info</div>
+                <div class="col-lg-4 col-md-12 col-sm-12 content1">The latest on pet adoption and pet care</div>
+                <div class="col-lg-4 col-md-12 col-sm-12 content1">Special offers from our partners
+
+                </div>
+
+            </div> -->
+            <div class="row centre">
+                <div class="col sample-1">--------Just One Step Away--------</div>
+            </div>
+            <form name="applicationForm" onsubmit="return validateForm()" class="row g-3" action="" method="post">
+
+                <!-- <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label><span id="passErr" class="formError"></span>
+                    <input type="password" class="form-control " id="inputPassword4" name="password">
+                </div> -->
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Fullname</label><span id="nameErr"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputname" name="name">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputZip" class="form-label">phone no</label><span id="mobileErr"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputmobile" name="mobile">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label><span id="emailErr"
+                        class="formError"></span>
+                    <input type="email" class="form-control " id="inputEmail" name="email">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputAddress" class="form-label">Address</label><span id="add1Err"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="add1">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputAddress2" class="form-label">Address 2</label><span id="add2Err"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                        name="add2">
+                </div>
+
+
+
+
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Name of the pet</label><span id="petnameErr"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputpetname" name="petname">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Pet Id</label><span id="petidErr"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputpetid" name="petid">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="inputCity" class="form-label">Why you want to adopt this pet</label><span id="reasonErr"
+                        class="formError"></span>
+                    <input type="text" class="form-control" id="inputreason" name="reason">
+
+                </div>
+
+
+
+                <div class="col-12 ">
+                    <button type="submit" class="btn btn-success subscribeButton">Apply</button>
+                </div>
+
+
+            </form>
+
+            <!-- <button type="button" class="btn btn-success subscribeButton">Subscribe</button> -->
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
