@@ -1,0 +1,222 @@
+/* nav{
+  height: 30%;
+} */
+
+li {
+  margin: 0px 30px;
+  color: rgb(235, 83, 41);
+  /* color: white; */
+}
+/* li:hover{
+  font-size: 2em;
+} */
+
+a {
+  color: purple;
+  /* font-size: 1.5em; */
+  /* background-color: black; */
+}
+a:hover{
+  /* font-size: 1.2em;
+   */
+   text-decoration: none;
+   font-size: 1.2em;
+}
+
+/* #navbarSupportedContent{
+    background-color: rgb(234, 68, 68);
+    
+} */
+
+#navbar1 {
+  background-color: red;
+}
+
+.navbar-brand {
+  background-color: rgb(234, 98, 48);
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.navbar {
+  border: 5px solid rgb(14, 6, 3);
+  background-color: black;
+  height: 10%;
+}
+
+.carouselExampleControls {
+  height: 300px;
+}
+
+#carousel1 {
+  height: 10px;
+}
+
+.carousel-container-main {
+  height: 200px;
+}
+
+.card-title {
+  border-radius: 30px !important;
+  margin-left: 30%;
+  /* border: 10px solid black; */
+}
+
+.card-img-top {
+  border-radius: 30px;
+}
+
+.card {
+  border-radius: 30px;
+  margin-top: 200px;
+}
+
+footer {
+  border: 5px solid black;
+  margin-top: 200px;
+  background-color: whitesmoke
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.9;
+  border-radius: 50%;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 10px;
+  float: right;
+  margin: 10px;
+}
+
+/* Twitter */
+.fa-instagram {
+  background: rgb(223, 48, 138);
+  color: white;
+  border-radius: 10px;
+  float: right;
+  margin: 10px 0px 10px 5px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.login-signup {
+  margin-top: 20px;
+}
+
+.login-button {
+  margin-right: 5px;
+  /* margin-left: 5px; */
+  border-radius: 50%;
+}
+
+.signup-button {
+  border-radius: 50%;
+  /* margin-left: 5px; */
+}
+
+.signup-button2 {
+  border-radius: 20px;
+  width: 50%;
+}
+
+.signup-button2:hover {
+  background-color: white;
+  color: black;
+}
+
+#divforsignuplogo {
+
+  /* display: inline-block; */
+  /* margin: 1% 30%; */
+  margin: auto;
+  border: 2px solid red;
+
+}
+
+.centre {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:auto;
+}
+
+.responsive-image-signup {
+  height: auto;
+  width: 100%;
+}
+.row{
+  border: 1px solid black;
+}
+
+.subscribeButton{
+width: 50%;
+border-radius: 20px;
+margin-top: 20px;
+margin-left: 10px;
+}
+.subscribeButton:hover{
+  background-color: white;
+  color: black;
+}
+
+.responsive-image-signup{
+  margin-bottom: 20px;
+}
+
+.sample-1{
+  font-size: 200%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.submitsignupform{
+  margin-top: 60px;
+  margin-bottom: 30px;
+  
+}
+
+.content1{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.wa-para{
+  margin: 20px 0px 20px 0px;
+  color: black;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.wa-heading{
+  color: rgb(171, 33, 33);
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+/* .indexCard:hover{
+  font-size: 2em;
+
+} */
+
+.formError{
+  color: red;
+}
